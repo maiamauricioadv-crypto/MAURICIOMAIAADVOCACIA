@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia: Como Publicar seu Site no GitHub Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2a1114;
+            border-bottom: 4px solid #d3ac57;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2a1114;
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #d3ac57;
+            margin: 30px 0 20px 0;
+        }
+
+        .step {
+            background: #fafafa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .step-number {
+            background: #2a1114;
+            color: #d3ac57;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .step-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2a1114;
+        }
+
+        .step-content {
+            margin-left: 55px;
+            color: #555;
+        }
+
+        .step-content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .step-content li {
+            margin: 8px 0;
+        }
+
+        .important {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .tip {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: #d3ac57;
+            color: #2a1114;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+
+        .link-button:hover {
+            background: #e5be69;
+            transform: translateY(-2px);
+        }
+
+        .screenshot-placeholder {
+            background: #e9ecef;
+            border: 2px dashed #adb5bd;
+            padding: 40px;
+            text-align: center;
+            margin: 15px 0;
+            border-radius: 5px;
+            color: #6c757d;
+        }
+
+        .option-box {
+            background: white;
+            border: 2px solid #d3ac57;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .option-title {
+            color: #2a1114;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📘 Como Publicar seu Site no GitHub Pages (GRÁTIS)</h1>
+        
+        <p style="font-size: 18px; margin-bottom: 30px; color: #555;">
+            Siga este guia passo a passo para colocar o site do <strong>Mauricio Maia Advocacia</strong> no ar gratuitamente!
+        </p>
+
+        <!-- PASSO 1 -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                <span>Criar conta no GitHub</span>
+            </div>
+            <div class="step-content">
+                <p>Acesse o site do GitHub e crie sua conta:</p>
+                <a href="https://github.com" target="_blank" class="link-button">Ir para GitHub.com</a>
+                
+                <ul>
+                    <li>Clique em <strong>"Criar uma conta"</strong> ou <strong>"Sign up"</strong></li>
+                    <li>Preencha seu email</li>
+                    <li>Escolha uma senha forte</li>
+                    <li>Escolha um nome de usuário (exemplo: mauriciomaia-adv)</li>
+                    <li>Confirme seu email</li>
+                </ul>
+
+                <div class="tip">
+                    <strong>💡 Dica:</strong> Escolha um nome de usuário profissional, pois ele fará parte do endereço do seu site!
+                </div>
+            </div>
+        </div>
+
+        <!-- PASSO 2 -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                <span>Criar um novo repositório</span>
+            </div>
+            <div class="step-content">
+                <p>Após fazer login no GitHub:</p>
+                <ul>
+                    <li>Clique no botão <strong>"+"</strong> no canto superior direito</li>
+                    <li>Selecione <strong>"Novo repositório"</strong> ou <strong>"New repository"</strong></li>
+                    <li>No campo <strong>"Nome do repositório"</strong>, digite: <code>mauriciomaia-advocacia</code></li>
+                    <li>Deixe marcado como <strong>"Público"</strong> (Public)</li>
+                    <li>Marque a opção <strong>"Adicionar um arquivo README"</strong> (Add a README file)</li>
+                    <li>Clique em <strong>"Criar repositório"</strong> (Create repository)</li>
+                </ul>
+
+                <div class="important">
+                    <strong>⚠️ Importante:</strong> O repositório DEVE ser público para o GitHub Pages funcionar gratuitamente!
+                </div>
+            </div>
+        </div>
+
+        <!-- PASSO 3 -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                <span>Renomear o arquivo HTML</span>
+            </div>
+            <div class="step-content">
+                <p><strong>ANTES de fazer upload</strong>, você precisa renomear o arquivo:</p>
+                <ul>
+                    <li>Localize o arquivo <code>mauricio-maia-advocacia.html</code> que você baixou</li>
+                    <li>Clique com o botão direito nele</li>
+                    <li>Selecione <strong>"Renomear"</strong></li>
+                    <li>Mude o nome para: <code>index.html</code></li>
+                </ul>
+
+                <div class="important">
+                    <strong>⚠️ MUITO IMPORTANTE:</strong> O arquivo DEVE se chamar <code>index.html</code> (com todas as letras minúsculas). Se não renomear, o site não vai funcionar!
+                </div>
+            </div>
+        </div>
+
+        <!-- PASSO 4 -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                <span>Fazer upload do arquivo</span>
+            </div>
+            <div class="step-content">
+                <p>Agora vamos enviar o arquivo para o GitHub:</p>
+                <ul>
+                    <li>Dentro do repositório que você criou, procure o botão <strong>"Adicionar arquivo"</strong> ou <strong>"Add file"</strong></li>
+                    <li>Clique em <strong>"Enviar arquivos"</strong> ou <strong>"Upload files"</strong></li>
+                    <li>Arraste o arquivo <code>index.html</code> para a área indicada</li>
+                    <li>Role a página para baixo</li>
+                    <li>Clique no botão verde <strong>"Fazer commit das alterações"</strong> ou <strong>"Commit changes"</strong></li>
+                </ul>
+
+                <div class="success">
+                    <strong>✅ Pronto!</strong> Seu arquivo já está no GitHub!
+                </div>
+            </div>
+        </div>
+
+        <!-- PASSO 5 -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">5</span>
+                <span>Ativar o GitHub Pages</span>
+            </div>
+            <div class="step-content">
+                <p>Agora vamos ativar a publicação do site:</p>
+                <ul>
+                    <li>No seu repositório, clique em <strong>"Configurações"</strong> ou <strong>"Settings"</strong> (ícone de engrenagem no menu superior)</li>
+                    <li>No menu lateral esquerdo, procure e clique em <strong>"Páginas"</strong> ou <strong>"Pages"</strong></li>
+                    <li>Na seção <strong>"Origem"</strong> ou <strong>"Source"</strong>:</li>
+                    <ul>
+                        <li>No primeiro menu (Branch), selecione <strong>"main"</strong> (ou "master", se essa for a opção)</li>
+                        <li>No segundo menu, deixe <strong>"/ (root)"</strong> selecionado</li>
+                    </ul>
+                    <li>Clique em <strong>"Salvar"</strong> ou <strong>"Save"</strong></li>
+                </ul>
+
+                <div class="screenshot-placeholder">
+                    <p><strong>Onde encontrar "Source":</strong></p>
+                    <p>Settings (Configurações) → Pages (Páginas) → Branch → Selecionar "main" → Save (Salvar)</p>
+                </div>
+
+                <div class="tip">
+                    <strong>⏱️ Aguarde:</strong> O GitHub vai levar de 2 a 5 minutos para publicar seu site. Seja paciente!
+                </div>
+            </div>
+        </div>
+
+        <!-- PASSO 6 -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">6</span>
+                <span>Acessar seu site</span>
+            </div>
+            <div class="step-content">
+                <p>Após alguns minutos, seu site estará disponível em:</p>
+                
+                <div class="success" style="margin: 20px 0; padding: 20px; font-size: 18px;">
+                    <strong>https://seu-usuario.github.io/mauriciomaia-advocacia</strong>
+                </div>
+
+                <p>Substitua <code>seu-usuario</code> pelo nome de usuário que você escolheu no GitHub.</p>
+
+                <div class="tip">
+                    <strong>💡 Encontre o link exato:</strong> Volte para a página Settings → Pages, e o GitHub mostrará o link completo do seu site em um banner verde no topo!
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÕES ADICIONAIS -->
+        <h2>🌐 Quer um domínio próprio? (mauriciomaia.adv.br)</h2>
+
+        <div class="option-box">
+            <div class="option-title">Opção 1: Registro.br (Oficial para .br)</div>
+            <ul>
+                <li>Acesse: <a href="https://registro.br" target="_blank">registro.br</a></li>
+                <li>Pesquise se <code>mauriciomaia.adv.br</code> está disponível</li>
+                <li>Custo: <strong>R$ 40/ano</strong> para domínio .adv.br</li>
+                <li>Após registrar, você pode conectar ao GitHub Pages</li>
+            </ul>
+        </div>
+
+        <div class="option-box">
+            <div class="option-title">Opção 2: Hospedagem Completa</div>
+            <p>Se preferir uma hospedagem tradicional com suporte:</p>
+            <ul>
+                <li><strong>Hostinger:</strong> A partir de R$ 12/mês (domínio grátis no 1º ano)</li>
+                <li><strong>Hostgator:</strong> A partir de R$ 15/mês</li>
+                <li><strong>Locaweb:</strong> A partir de R$ 20/mês</li>
+            </ul>
+            <p style="margin-top: 10px; color: #666;">Neste caso, você faz upload do arquivo HTML direto no painel de controle da hospedagem.</p>
+        </div>
+
+        <!-- SOLUÇÃO DE PROBLEMAS -->
+        <h2>🔧 Problemas Comuns e Soluções</h2>
+
+        <div class="step">
+            <div class="step-title">
+                <span style="font-size: 24px; margin-right: 10px;">⚠️</span>
+                <span>Site não aparece (erro 404)</span>
+            </div>
+            <div class="step-content">
+                <p><strong>Causas possíveis:</strong></p>
+                <ul>
+                    <li>O arquivo não se chama <code>index.html</code> (tem que ser exatamente assim, minúsculo)</li>
+                    <li>Você ainda não ativou o GitHub Pages em Settings → Pages</li>
+                    <li>Você não esperou os 2-5 minutos para o site ficar pronto</li>
+                    <li>O repositório está privado (precisa estar público)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span style="font-size: 24px; margin-right: 10px;">⚠️</span>
+                <span>Não encontro "Pages" em Settings</span>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Certifique-se que está em <strong>Settings</strong> do repositório (não Settings da sua conta)</li>
+                    <li>Role o menu lateral para baixo - "Pages" fica mais embaixo</li>
+                    <li>O repositório precisa estar público</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONCLUSÃO -->
+        <div class="success" style="margin-top: 40px; padding: 25px; font-size: 16px;">
+            <h3 style="margin-bottom: 15px;">🎉 Parabéns!</h3>
+            <p>Seguindo estes passos, seu site estará no ar gratuitamente! Você poderá compartilhar o link com seus clientes e o site ficará disponível 24 horas por dia.</p>
+            <p style="margin-top: 10px;"><strong>Precisa de ajuda?</strong> Anote exatamente em qual passo você travou e peça ajuda detalhando o problema!</p>
+        </div>
+    </div>
+</body>
+</html>
